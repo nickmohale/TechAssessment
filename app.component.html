@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col=md-12">
+        <2>My Location Test </2>
+            <div class="form-group">
+              <label for="place"> Find Me : </label>
+              <input type="button" class="form-group" id="place" #search[formControl]="searchControl">
+            </div>
+      </div>
+  </div>
+
+  <!--This function will add a maker on the map-->
+  <div class="row">
+    <div class="col-md-12">
+      <amg-map [latitude]="latitude"[longitude]="longitude" [scrollwhell]="false"[zoom]="zoom"style="height:400px;">
+        <agm-marker *ngFor="lat latlng of latlongs"[latitude]="latlng.latitude"[longitude]="latlng.longitude"></agm-marker>
+
+      </amg-map>
+    </div>
+  </div>
+</div>
